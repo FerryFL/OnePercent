@@ -15,7 +15,7 @@ app.use(express.json());
 
 // Enable CORS for specific routes
 const corsConfig = {
-    origin: "http://localhost:3000", // Change this to your development frontend URL
+    origin: "https://one-percent-ten.vercel.app", // Change this to your development frontend URL
     credentials: true,
     methods: ["GET", "POST", "PATCH", "DELETE"]
 };
