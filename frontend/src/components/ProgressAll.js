@@ -121,7 +121,7 @@ const ProgressAll = ({ progress }) => {
     setStatus(newStatus);
 
     // Update the status in the database
-    const response = await fetch(`/api/progress/${progress._id}`, {
+    const response = await fetch(`https://one-percent-api.vercel.app/api/progress/${progress._id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
