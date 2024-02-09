@@ -1,6 +1,11 @@
-
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/",  "headers": {" Access-Control-Allow-Origin": "*"}}
+    {
+      "source": "/(.*)",
+      "destination": "/",
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      }
+    }
   ]
 }
