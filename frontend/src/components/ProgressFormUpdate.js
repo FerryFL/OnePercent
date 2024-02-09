@@ -19,7 +19,7 @@ const ProgressFormUpdate = ({ idToUpdate }) => {
     if (idToUpdate) {
       const fetchProgressDetails = async () => {
         try {
-          const response = await fetch(`http://localhost:4000/api/progress/${idToUpdate}`, {
+          const response = await fetch(`https://one-percent-api.vercel.app/api/progress/${idToUpdate}`, {
             headers:{
               'Authorization': `Bearer ${user.token}`
             }
@@ -57,7 +57,7 @@ const ProgressFormUpdate = ({ idToUpdate }) => {
       
       const progress = { title, description, goal, status }
 
-      const response = await fetch(`http://localhost:4000/api/progress/${idToUpdate}`, {
+      const response = await fetch(`https://one-percent-api.vercel.app/api/progress/${idToUpdate}`, {
         method: "PATCH",
         body: JSON.stringify(progress),
         headers: {

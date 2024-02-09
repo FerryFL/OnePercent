@@ -19,7 +19,7 @@ const ReviewForm = () =>{
 
         const review = { name, desc }
 
-        const response = await fetch('http://localhost:4000/api/review',{
+        const response = await fetch('https://one-percent-api.vercel.app/api/review',{
             method: 'POST',
             body: JSON.stringify(review),
             headers: {

@@ -23,7 +23,7 @@ const ProgressForm = ()=>{
         }
         const progress = {title, description, goal, status}
 
-        const response = await fetch('http://localhost:4000/api/progress',{
+        const response = await fetch('https://one-percent-api.vercel.app/api/progress',{
             method: 'POST',
             body: JSON.stringify(progress),
             headers: {

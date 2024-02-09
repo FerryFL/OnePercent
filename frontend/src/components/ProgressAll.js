@@ -91,7 +91,7 @@ const ProgressAll = ({ progress }) => {
     const userConfirmed = window.confirm('You wanna delete it, sure man?');
 
     if (userConfirmed) {
-      const response = await fetch('http://localhost:4000/api/progress/' + progress._id, {
+      const response = await fetch('https://one-percent-api.vercel.app/api/progress/' + progress._id, {
         headers: {
           'Authorization': `Bearer ${user.token}`
         },

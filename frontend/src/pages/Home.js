@@ -12,7 +12,7 @@ const Home = () =>{
 
     useEffect(() =>{
         const fetchProgress = async ()=>{
-            const response = await fetch('http://localhost:4000/api/progress', {
+            const response = await fetch('https://one-percent-api.vercel.app/api/progress', {
                 headers:{
                     'Authorization': `Bearer ${user.token}`
                 }

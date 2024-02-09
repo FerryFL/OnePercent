@@ -10,7 +10,7 @@ export const useSignup = () => {
         setError(null)
         setIsLoading(true)
 
-        const response = await fetch('http://localhost:4000/api/user/signup',{
+        const response = await fetch('https://one-percent-api.vercel.app/api/user/signup',{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -14,7 +14,7 @@ const Review = () =>{
             if(!user){
                 return
             }
-            const response = await fetch('http://localhost:4000/api/review', {
+            const response = await fetch('https://one-percent-api.vercel.app/api/review', {
                 headers: {
                     'Authorization': `Bearer ${user.token}`
                 }
