@@ -5,12 +5,17 @@ import { useAuthContext } from "../hooks/useAuthContext";
 
 const ProgressAll = ({ progress }) => {
   const { dispatch } = useProgressContext();
-  const [status, setStatus] = useState(progress.status);
+  const [status, setStatus] = useState(() => {
+    // Retrieve status from localStorage or default to progress.status
+    return localStorage.getItem(`status_${progress._id}`) || progress.status;
+  });
   const [passed, setPassed] = useState('Not Passed');
   const [deadline, setDeadline] = useState('');
   const {user} = useAuthContext()
 
   useEffect(() => {
+    localStorage.setItem(`status_${progress._id}`, status);
+
     const calculateDeadline = () => {
       // Get the date when the progress was created
       const createdAtDate = new Date(progress.createdAt);
@@ -85,7 +90,7 @@ const ProgressAll = ({ progress }) => {
     // Clean up the interval on component unmount
     return () => clearInterval(interval);
     
-  }, [status, progress.goal, progress.createdAt, deadline]);
+  }, [status, progress.goal, progress.createdAt, deadline, progress._id]);
 
   const handleClick = async () => {
     const userConfirmed = window.confirm('You wanna delete it, sure man?');

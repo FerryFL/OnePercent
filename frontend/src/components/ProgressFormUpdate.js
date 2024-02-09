@@ -81,34 +81,34 @@ const ProgressFormUpdate = ({ idToUpdate }) => {
   };
 
   return (
-    <div className="w-11/12 p-10 my-10 mx-auto bg-[#022B3A] text-[#E1E5F2]">
+    <div className="w-11/12 p-5 md:p-10 my-10 mx-auto bg-[#022B3A] text-[#E1E5F2]">
             <form onSubmit={handleSubmit}>
             
                 <div className="w-full flex">
-                    <h4 className="mx-auto text-2xl font-bold">Update Progress</h4>
+                    <h4 className="mx-auto text-lg md:text-2xl lg:text-3xl font-bold">Add New Progress</h4>
                 </div>
             
-                <div className="w-full flex my-5">
-                    <div className="w-4/12 text-lg font-semibold p-3">
-                        <p>Title</p>
-                        <input type="text" placeholder="Add here..." onChange={(e)=>setTitle(e.target.value)} value={title} className="border-b-2 font-normal shadow-sm focus:outline-none bg-transparent w-full py-3"></input>                  
+                <div className="w-full flex flex-col md:flex-row my-5">
+                    <div className="w-full md:w-4/12 p-3">
+                        <p className="text-base md:text-lg lg:text-xl font-bold">Title</p>
+                        <input type="text" placeholder="Add here..." onChange={(e)=>setTitle(e.target.value)} value={title} className="border-b-2 text-sm md:text-base shadow-sm focus:outline-none bg-transparent w-full md:py-3 py-2"></input>                  
                     </div>
 
-                    <div className="w-4/12 text-lg font-semibold p-3">
-                        <p>Description</p>
-                        <input type="text" placeholder="Add here..." onChange={(e)=>setDescription(e.target.value)} value={description} className="border-b-2 font-normal shadow-sm focus:outline-none bg-transparent w-full py-3"></input>
+                    <div className="w-full md:w-4/12 p-3">
+                        <p className="text-base md:text-lg lg:text-xl font-bold">Description</p>
+                        <input type="text" placeholder="Add here..." onChange={(e)=>setDescription(e.target.value)} value={description} className="border-b-2 text-sm md:text-base shadow-sm focus:outline-none bg-transparent w-full py-2 md:py-3"></input>
                     </div>
  
-                    <div className="w-4/12 text-lg font-semibold p-3">
-                        <p>Goal</p>
-                        <input type="number" placeholder="Add here..." onChange={(e)=>setGoal(e.target.value)} value={goal} className="border-b-2 font-normal shadow-sm focus:outline-none bg-transparent w-full py-3"></input>
+                    <div className="w-full md:w-4/12 p-3">
+                        <p className="text-base md:text-lg lg:text-xl font-bold">Goal</p>
+                        <input type="number" placeholder="Add here..." onChange={(e)=>setGoal(e.target.value)} value={goal} className="border-b-2 shadow-sm text-sm md:text-base focus:outline-none bg-transparent w-full py-2 md:py-3"></input>
                     </div>
 
                 </div>
             
-                <div className="w-8/12 flex justify-evenly mx-auto py-5">
-                    <button type="submit" className="text-lg font-semibold bg-[#E1E5F2] text-[#022B3A] px-4 py-2">Submit</button>
-                    <Link to='/'><button className="text-lg font-semibold bg-[#E1E5F2] text-[#022B3A] px-4 py-2">Back</button></Link>
+                <div className="w-8/12 flex justify-evenly mx-auto py-2 md:py-5">
+                    <button type="submit" className="text-base md:text-lg font-semibold bg-[#E1E5F2] text-[#022B3A] px-3 md:px-4 py-1 md:py-2">Submit</button>
+                    <Link to='/'><button className="text-base md:text-lg font-semibold bg-[#E1E5F2] text-[#022B3A] px-3 md:px-4 py-1 md:py-2">Back</button></Link>
                 </div>
 
                 {error&&<div className="text-red-500 text-center">{error}</div>}
