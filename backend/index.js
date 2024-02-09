@@ -15,7 +15,7 @@ app.use(express.json());
 
 // Enable CORS for specific routes
 const corsConfig = {
-    origin: "*",
+    origin: "http://localhost:3000", // Change this to your development frontend URL
     credentials: true,
     methods: ["GET", "POST", "PATCH", "DELETE"]
 };
