@@ -67,7 +67,7 @@ const ProgressForm = ()=>{
                     </div>
  
                     <div className="w-full md:w-4/12 p-3">
-                        <p className="text-base md:text-lg lg:text-xl font-bold">Goal</p>
+                        <p className="text-base md:text-lg lg:text-xl font-bold">Goal (Number in days)</p>
                         <input type="number" placeholder="Add here..." onChange={(e)=>setGoal(e.target.value)} value={goal} className="border-b-2 shadow-sm text-sm md:text-base focus:outline-none bg-transparent w-full py-2 md:py-3"></input>
                     </div>
 

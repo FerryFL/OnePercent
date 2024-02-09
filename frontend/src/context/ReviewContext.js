@@ -12,6 +12,10 @@ export const reviewReducer = (state,action) => {
             return{
                 review: [...state.review, action.payload]
             }
+        case 'DELETE_REVIEW':
+            return{
+                progress: state.review.filter((w)=>w._id !== action.payload._id)
+            }
         default:
             return state
     }

@@ -93,7 +93,7 @@ const ProgressAll = ({ progress }) => {
   }, [status, progress.goal, progress.createdAt, deadline, progress._id]);
 
   const handleClick = async () => {
-    const userConfirmed = window.confirm('You wanna delete it, sure man?');
+    const userConfirmed = window.confirm('You wanna delete it, sure?');
 
     if (userConfirmed) {
       const response = await fetch('https://one-percent-api.vercel.app/api/progress/' + progress._id, {

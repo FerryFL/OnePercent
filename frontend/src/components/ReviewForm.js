@@ -5,7 +5,7 @@ import { useAuthContext } from "../hooks/useAuthContext"
 const ReviewForm = () =>{
     const { dispatch } = useReviewContext()
     const { user } = useAuthContext()
-    const [name, setName] = useState(user?user.username: '')
+    const name = user?user.username: ''
     const [desc, setDesc] = useState('')
     const [error, setError] = useState(null)
 
@@ -33,7 +33,6 @@ const ReviewForm = () =>{
         if(!response.ok){
             setError(json.error)
         }else{
-            setName('')
             setDesc('')
             setError(null)
             dispatch({type:'CREATE_REVIEW', payload: json})
@@ -55,7 +54,7 @@ const ReviewForm = () =>{
                 <div className="w-2/12">
                     <button type="submit" className="w-full h-full text-base md:text-lg">Send</button>
                 </div>
-
+                
                 
             </form>
             {error&&<div className="text-center text-red-500">{error}</div>}
