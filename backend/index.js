@@ -14,7 +14,16 @@ const userRoutes = require('./routes/user')
 app.use(express.json())
 
 // Enable CORS for all routes
-app.use(cors())
+
+
+const corsConfig = {
+    origin: "*",
+    credential: true,
+    methods: ["GET","POST","PATCH","DELETE"]
+}
+
+app.options("", cors(corsConfig))
+app.use(cors(corsConfig))
 
 // app.use(cors({
 //     origin: 'https://one-percent-lime.vercel.app'
